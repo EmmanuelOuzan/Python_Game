@@ -36,5 +36,7 @@ def play(difficulty):
     print(exchange_rate)
     if (exchange_rate - (5 - difficulty)) <= user_number <= (exchange_rate + (5 - difficulty)):
         print("You are right! you won!")
+        return True
     else:
         print("You lost mate! You are wrong!")
+        return False

@@ -1,6 +1,7 @@
 import GuessGame
 import MemoryGame
 import CurrencyRouletteGame
+import Score
 
 
 def welcome(name):
@@ -30,11 +31,13 @@ Please choose a game to play:
 
     if game_number == 1:
         print("Starting Memory game")
-        MemoryGame.play(game_difficulty)
+        result = MemoryGame.play(game_difficulty)
     if game_number == 2:
         print("Starting Guess Game")
-        print(GuessGame.play(game_difficulty))
+        result = GuessGame.play(game_difficulty)
     if game_number == 3:
         print("Starting Currency Roulette game")
-        CurrencyRouletteGame.play(game_difficulty)
+        result = CurrencyRouletteGame.play(game_difficulty)
 
+    if result is True:
+        Score.add_score(game_difficulty)

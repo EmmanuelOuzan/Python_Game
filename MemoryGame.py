@@ -36,6 +36,8 @@ def play(difficulty):
     user_list = get_list_from_user(difficulty)
     if is_list_equal(difficulty, pc_sequence, user_list):
         print("You won!, great memory!")
+        return True
     else:
         print("You lost! try again!")
+        return False
 
